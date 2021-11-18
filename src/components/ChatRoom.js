@@ -3,7 +3,7 @@ import React from 'react'
 function ChatRoom() {
     return (
         <div>
-            
+            Chat
         </div>
     )
 }

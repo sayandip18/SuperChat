@@ -1,33 +1,17 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import './App.css';
-
+import ChatRoom from './components/ChatRoom';
+import SignIn from './components/SignIn';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useCollectionData } from 'react-firebase-hooks/firestore';
-
-import { signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
-
-
-
-import { collection } from "firebase/firestore";
-
-
-
-
+import { auth } from './firebase';
 
 
 function App() {
   const [user] = useAuthState(auth)
   return (
-    <div className="App">
-      <header>
-        <h1>⚛️🔥💬</h1>
-        <SignOut />
-      </header>
-
-      <section>
-        {user ? <ChatRoom /> : <SignIn />}
-      </section>
-    </div>
+    <>
+      { user? <ChatRoom />: <SignIn /> }
+    </>
   );
 }
 
