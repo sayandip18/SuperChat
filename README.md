@@ -14,4 +14,4 @@ Group chat application where users can login with Gmail and chat with one anothe
 
 ## To run
 
-Clone the app. Then cd into the project directory and run `npm start`
+Clone the app. Then cd into the project directory and run `npm install` followed by `npm start`
